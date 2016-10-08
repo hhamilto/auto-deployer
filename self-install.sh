@@ -34,7 +34,7 @@ watchdog_for_project/start-dog.sh # also starts project up
 # finally clone self and start listening for githooks
 
 git clone https://github.com/hhamilto/auto-deployer.git
-AUTO_DEPLOYER_DIRECTORY=realpath auto-deployer
+AUTO_DEPLOYER_DIRECTORY=`realpath auto-deployer`
 echo "$NODE_PROJECT_DIRECTORY" > auto-deployer/PROJECT_TO_MANAGE_DIR
 
 # give the githook listener a watchdog

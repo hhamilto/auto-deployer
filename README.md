@@ -1,4 +1,4 @@
-# Auto deploy and keep-alive for `npm start`able projects
+# Auto deploy and keep-alive for `npm start` and `stop`able projects
 
 dependencies: `curl`, `apt-get`, and `bash` are installed.
 
