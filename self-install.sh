@@ -7,7 +7,7 @@ BASEDIR=$(dirname $0)
 sudo apt-get install git wget
 
 wget https://nodejs.org/dist/v6.7.0/node-v6.7.0-linux-x64.tar.xz
-tar -zxvf node-v*.tar.xz
+tar -xvf node-v*.tar.xz
 
 echo 'export PATH=$PATH:/home/`whoami`/node-v6.7.0-linux-x64/bin' > .noninteractive_profile
 echo 'export PATH=$PATH:/home/`whoami`/node-v6.7.0-linux-x64/bin' > .bashrc
