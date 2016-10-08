@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js & echo $! > .pid",
+    "stop": "kill -9 `cat .pid`"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/hhamilto/auto-deployer/issues"
   },
-  "homepage": "https://github.com/hhamilto/auto-deployer#readme"
+  "homepage": "https://github.com/hhamilto/auto-deployer#readme",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "koa-bodyparser": "^2.2.0"
+  }
 }
