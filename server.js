@@ -9,7 +9,7 @@ const childProcess = Promise.promisifyAll(require('child_process'))
 const app = koa()
 app.use(bodyParser())
 app.use(require('koa-static')(__dirname+'/public'))
-app.use(router.get('/redeploy', function *(){
+app.use(router.all('/redeploy', function *(){
 	yield childProcess.execAsync(__dirname+'./pull-project.sh')
 	.then(_.partial(childProcess.execAsync, __dirname+'./kill-project.sh'))
 	.then(_.constant('done'))

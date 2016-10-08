@@ -46,3 +46,7 @@ RESTART_COMMAND='bash -c \"cd $AUTO_DEPLOYER_DIRECTORY; npm start\"'
 " > watchdog_for_hook_reciever/conf.env
 
 watchdog_for_hook_reciever/start-dog.sh # also starts project up
+
+#spit out githook url
+echo "Your githook url:"
+echo 'http://'`dig +short myip.opendns.com @resolver1.opendns.com`':1337/redeploy'
