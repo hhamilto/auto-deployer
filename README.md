@@ -4,7 +4,7 @@ dependencies: `curl`, `apt-get`, and `bash` are installed.
 
 To begin, run this command:
 
-    curl https://github.com/path/to/script
+    curl https://raw.githubusercontent.com/hhamilto/auto-deployer/master/self-install.sh | bash
 
 
 # Limitations
