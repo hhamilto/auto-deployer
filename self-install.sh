@@ -36,7 +36,10 @@ echo "Cloning auto-deployer..."
 git clone https://github.com/hhamilto/auto-deployer.git
 echo "Cloned"
 AUTO_DEPLOYER_DIRECTORY=`realpath auto-deployer`
-echo "$NODE_PROJECT_DIRECTORY" > auto-deployer/PROJECT_TO_MANAGE_DIR
+cd $AUTO_DEPLOYER_DIRECTORY
+npm install
+echo "$NODE_PROJECT_DIRECTORY" > PROJECT_TO_MANAGE_DIR
+cd $BASEDIR
 
 # give the githook listener a watchdog
 cp -r watchdog_for_project watchdog_for_hook_reciever
