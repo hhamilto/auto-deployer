@@ -23,13 +23,13 @@ npm install
 cd $BASEDIR
 
 # clone watch dog
-git clone https://github.com/hhamilto/watchdog.git watchdog_for_project
+git clone https://github.com/hhamilto/watchdog.git watchdog-for-project
 # configure watchdog
 echo "
 RESTART_COMMAND='bash -c \"cd $NODE_PROJECT_DIRECTORY; npm start\"'
-" > watchdog_for_project/conf.env
+" > watchdog-for-auto-deployer/conf.env
 
-watchdog_for_project/start-dog.sh # also starts project up
+watchdog-for-project/start-dog.sh # also starts project up
 
 # finally clone self and start listening for githooks
 echo "Cloning auto-deployer..."
@@ -42,14 +42,14 @@ echo "$NODE_PROJECT_DIRECTORY" > PROJECT_TO_MANAGE_DIR
 cd $BASEDIR
 
 # give the githook listener a watchdog
-cp -r watchdog_for_project watchdog_for_hook_reciever
+cp -r watchdog-for-project watchdog-for-auto-deployer
 
 # Start the hook reciever
 echo "
 RESTART_COMMAND='bash -c \"cd $AUTO_DEPLOYER_DIRECTORY; npm start\"'
-" > watchdog_for_hook_reciever/conf.env
+" > watchdog-for-auto-deployer/conf.env
 
-watchdog_for_hook_reciever/start-dog.sh # also starts project up
+watchdog-for-auto-deployer/start-dog.sh # also starts project up
 
 #spit out githook url
 echo "Your githook url:"
