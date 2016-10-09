@@ -20,6 +20,10 @@
   "homepage": "https://github.com/hhamilto/auto-deployer#readme",
   "dependencies": {
     "bluebird": "^3.4.6",
-    "koa-bodyparser": "^2.2.0"
+    "koa": "^1.2.4",
+    "koa-bodyparser": "^2.2.0",
+    "koa-route": "^2.4.2",
+    "koa-static": "^2.0.0",
+    "lodash": "^4.16.4"
   }
 }
