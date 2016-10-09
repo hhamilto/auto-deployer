@@ -1,8 +1,6 @@
 #! /bin/bash
 
-BASEDIR=$(dirname $0)
-echo $BASEDIR
-exit
+BASEDIR=`realpath $(dirname $0)`
 
 #install git and node
 
