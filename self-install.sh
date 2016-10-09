@@ -27,7 +27,7 @@ git clone https://github.com/hhamilto/watchdog.git watchdog-for-project
 # configure watchdog
 echo "
 RESTART_COMMAND='bash -c \"cd $NODE_PROJECT_DIRECTORY; npm start\"'
-" > watchdog-for-auto-deployer/conf.env
+" > watchdog-for-project/conf.env
 
 watchdog-for-project/start-dog.sh # also starts project up
 
